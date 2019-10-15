@@ -14,7 +14,14 @@ public class PrimarySpanishGreetingService implements GreetingService {
 
     private GreetingRepository greetingRepository;
 
-    @Override
+    public PrimarySpanishGreetingService(GreetingRepository greetingRepository) {
+		super();
+		this.greetingRepository = greetingRepository;
+	}
+
+
+
+	@Override
     public String sayGreeting() {
         return greetingRepository.getSpanishGreeting();
     }
